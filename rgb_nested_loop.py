@@ -18,20 +18,20 @@ def main():
 
     # determines the different color codes
     # displays results to the console
-    for blue in range(0, 51, 1):
+    # for the for loop, it starts at 0, goes up to 51 at a increment of 1
+    for blue in range(0, 255, 1):
         print("\33[34mRGB ({}, {}, {})".format(red, green, blue))
         if blue == 50:
             print("")
-            for green in range(1, 51, 1):
+            for green in range(1, 255, 1):
                 blue = 0
                 print("\33[32mRGB ({}, {}, {})".format(red, green, blue))
                 if green == 50:
                     print("")
-                    for red in range(1, 51, 1):
+                    for red in range(1, 255, 1):
                         green = 0
                         # pycodestyle marks this line wrong for some reason!
-                        print("\33[31mRGB"
-                        "({}, {}, {})".format(red, green, blue))
+                        print("\33[31mRGB" "({}, {}, {})".format(red, green, blue))
 
 
 if __name__ == "__main__":
